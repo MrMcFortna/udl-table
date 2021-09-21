@@ -1,0 +1,106 @@
+body {
+	background-color: #eee;
+}
+
+.faux-h2 { font-size: 1.5rem; }
+.faux-h3 { font-size: 1.35rem; }
+.faux-h4 { font-size: 1.2rem; }
+.faux-h5 { font-size: 1.05rem; }
+
+/* General details styles */
+
+details {
+	cursor: pointer;
+	margin: 1rem 0;
+}
+
+details summary {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+details div {
+	margin-left: 1.15rem;
+	padding-top: 0.35rem;
+}
+
+
+/* General UDL Grid styles */
+
+.udl-grid {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+}
+
+
+/* 1st-level details elements */
+
+.udl-grid > details {
+	border: 1px solid black;
+	background-color: #ddd;
+}
+
+.udl-grid > details:nth-child(1) {
+	/* border: 2px solid rgb(46, 131, 100);
+	background-color: rgba(46, 131, 100, 0.3); */
+    background-color: #F3FAEF;
+    border-color: #77B259;
+}
+
+.udl-grid > details:nth-child(1) > summary {
+	color: white;
+	background-color: #77B259;
+}
+
+.udl-grid > details:nth-child(2) {
+	/* border: 1px solid rgb(171, 99, 147);
+	background-color: rgba(171, 99, 147, 0.3); */
+    background-color: #FDF8ED;
+    border-color: #E09600;
+}
+
+.udl-grid > details:nth-child(2) > summary {
+	color: white;
+	background-color: #E09600;
+}
+
+.udl-grid > details:nth-child(3) {
+	/* border: 1px solid rgba(225, 141, 150, 1);
+	background-color: rgba(225, 141, 150, 0.3); */
+	background-color: #F3EFFA;
+	border-color: #6B89AF;
+}
+
+.udl-grid > details:nth-child(3) > summary {
+	color: white;
+	background-color: #6B89AF;
+}
+
+.udl-grid > details > summary {
+	padding: 0.5rem;
+	/* border-bottom: 1px solid black; */
+}
+
+.udl-grid > details > div {
+	padding: 0.5rem;
+}
+
+
+
+/* 2nd-level details elements */
+
+details[open] > summary.faux-h3 {
+	border-bottom: 1px dashed black;
+}
+
+.udl-grid > details:nth-child(1) details[open] > summary.faux-h3 {
+	border-color: #77B259;
+}
+
+.udl-grid > details:nth-child(2) details[open] > summary.faux-h3 {
+	border-color: #E09600;
+}
+
+.udl-grid > details:nth-child(3) details[open] > summary.faux-h3 {
+	border-color: #6B89AF;
+}
