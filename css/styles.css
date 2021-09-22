@@ -10,11 +10,11 @@ body {
 /* General details styles */
 
 details {
-	cursor: pointer;
 	margin: 1rem 0;
 }
 
 details summary {
+	cursor: pointer;
 	font-size: 2rem;
 	font-weight: bold;
 }
